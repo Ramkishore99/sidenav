@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav"
+      fixedInViewport
+         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+         [mode]="(isHandset$ | async) ? 'over' : 'side'"
+         [opened]="(isHandset$ | async) === false">
+       <mat-toolbar><mat-icon aria-label="Side nav toggle icon">menu</mat-icon></mat-toolbar>
+       <mat-nav-list>
+        <ul>
+            <li><a (click)="isFoo = !isFoo" href="#"><mat-icon class="navicon" svgIcon="home-icon"></mat-icon><br>Home</a>
+               <ul *ngIf="isFoo" class="home">
+                    <li><a href="#">Role Management</a></li>
+                    <li><a href="#">Create User</a></li>
+                    <li (click)="show = !show"><a href="#" class="listuser-btn"><i class="arrow"></i> List User</a>
+                        <ul *ngIf="show" class="listuser">
+                            <li><a href="#">Active Users</a></li>
+                            <li><a href="#">All Users</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="platform-btn"><i class="arrow"></i>Platform</a></li>
+                    <li><a href="#">User Errors</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><mat-icon class="navicon" svgIcon="user-icon"></mat-icon><br>User Management</a></li>
+            <li><a href="#"><mat-icon class="navicon" svgIcon="stack-icon"></mat-icon><br>Resource Management</a></li>
+        </ul>
+        </mat-nav-list>
+     </mat-sidenav>
+     <mat-sidenav-content>
+       <mat-toolbar color="accent">
+           <button
+           type="button"
+           aria-label="Toggle sidenav"
+           mat-icon-button
+           (click)="drawer.toggle()"
+           *ngIf="isHandset$ | async">
+           <mat-icon  aria-label="Side nav toggle icon">menu</mat-icon>
+         </button>
+         <span>VPODS</span>
+       </mat-toolbar>
+       <ng-content></ng-content>
+       <!-- Add Content Here -->
+    </mat-sidenav-content>
+</mat-sidenav-container>

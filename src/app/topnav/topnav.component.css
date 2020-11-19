@@ -1,0 +1,105 @@
+.mat-toolbar.mat-accent{
+    background: white;
+    color: black;
+}
+
+.mat-icon-button{
+    color: rgb(47, 49, 54);
+}
+
+.mat-sidenav{
+    width: 10%;
+    top: 0;
+    bottom: 0;
+    background: white;
+    border-radius: 0 0 50px;
+    box-shadow: 2px 2px 2px rgb(202, 198, 183);
+}
+
+.mat-list-base{
+    padding-top: 0;
+}
+
+.mat-sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mat-sidenav ul li {
+    
+}
+
+.mat-sidenav ul li a {
+    display: list-item;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(48, 45, 45);
+    font-size: 8px;
+    text-align: center;
+    line-height: 10px;
+    padding:  30px;
+    transition: .5s ease;
+    margin-top: 20px;
+}
+
+.mat-sidenav ul .home li{
+    display: list-item;
+    justify-content: start;
+}
+
+.mat-sidenav ul .home li a{
+    padding: 0;
+    font-size: 10px;
+    line-height: 30px;
+}
+
+.mat-sidenav ul .home{
+    position: fixed;
+    left: 10.2%;
+    width: 15%;
+    top: 10%;
+    bottom: 0;
+    border-top-right-radius: 50px;
+    padding-top: 5%;
+    padding: 30px;
+    background: white;
+    box-shadow: 2px 2px 2px rgb(202, 198, 183);
+    
+    
+    
+}
+
+.mat-sidenav ul li a:hover {
+    color: rgb(99, 96, 96); 
+}
+
+.mat-sidenav ul .home li a:hover .arrow{
+    transform: rotate(45deg);
+}
+
+.mat-sidenav ul .listuser{
+    position: relative;
+    left: 30px;
+    
+}
+
+.mat-sidenav ul .listuser li a{
+    justify-items: stretch;
+}
+
+.mat-nav-list a{
+    transform: scale(1.5);
+}
+
+.arrow {
+    border: solid rgb(48, 45, 45);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-right: 5px;
+    transform: rotate(-45deg);
+  }
